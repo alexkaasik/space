@@ -1,5 +1,5 @@
 :root{
-    --dark-color: rgba(0, 0, 0, 0.5);
+    --dark-color: rgba(199, 31, 31, 0.5);
     --medium-color: #333;
     --light-color: rgba(119, 119, 119, 0.5);
     
@@ -26,4 +26,66 @@ body {
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 100%);
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    color:white ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+    animation-name: moveinleft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes moveinleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(20px);
+    
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    animation-name: moveinright;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveinright {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
